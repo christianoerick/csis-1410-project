@@ -1,3 +1,5 @@
+package test;
+
 /*Blackjack By Riley Ogier and Ciaran Bogedahl
   Player class - This class is for creating a player profile with the player's name and money amount.
 */
