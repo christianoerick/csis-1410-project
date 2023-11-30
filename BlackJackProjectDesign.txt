@@ -1,0 +1,35 @@
+Blackjack
+
+GUI: Dealer with deck, 4 players with hand display, hit and stay buttons, deal button
+
+Main:
+A deck is created 
+shuffle is called
+There will be four players instantiated with $500 in their bank
+A static variable keeps track of the next card delt in the deck
+
+Deal:
+Check if any player has $10 or greater.
+If the deck has fewer than 26 cards left, it is recreated and shuffled
+When dealing, the player must have $10 or greater to play and their balance is reduced by $10
+The cards are distributed to each player and the dealer in round robin fashion.
+If any player has a blackjack 21 - they are automatically paid out $15.
+
+Player turn:
+If they don't have a blackjack they are presented with two buttons: Hit or Stay
+Their turn ends when they either click stay or Hit results in a bust ( > 21)
+They get no turn if they already had a blackjack.
+After a player turn ends either the next player turn is called or dealer turn is called
+
+Dealer Turn:
+Automatically called after player 4 ends turn.
+The dealer takes another card if the total is under 17.
+The dealer turn ends if a bust or total is 17 or greater
+
+End of Deal:
+Each players hand is compared against dealer hand (This excludes any player with a blackjack)
+Each player is either awarded $20 or $0;
+
+
+
+
