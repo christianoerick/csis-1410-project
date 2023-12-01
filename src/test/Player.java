@@ -1,9 +1,8 @@
-package test;
-
 /*Blackjack By Riley Ogier and Ciaran Bogedahl
   Player class - This class is for creating a player profile with the player's name and money amount.
 */
 
+package test;
 
 public class Player {
    
@@ -14,7 +13,7 @@ public class Player {
    //constructors
    public Player(String playerName) {
       this.playerName = playerName;
-      playerMoney = 1000;
+      playerMoney = 2000;
    }
    
    //methods
@@ -26,12 +25,11 @@ public class Player {
       return playerMoney;
    }
    
-   public void setPlayerMoney(int playerMoney) {
-      this.playerMoney = playerMoney; 
+   public static void winPlayerMoney(int playerBet) {
+      playerMoney = playerMoney + playerBet; 
    }
    
-  // @Override
-  // public String toString() {
-  //    return playerName;
-  // }
+   public static void losePlayerMoney(int playerBet) {
+      playerMoney = playerMoney - playerBet; 
+   }
 }

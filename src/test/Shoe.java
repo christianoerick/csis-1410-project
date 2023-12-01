@@ -1,3 +1,8 @@
+/*Blackjack By Riley Ogier and Ciaran Bogedahl
+  Shoe class creates the shoe with 6 decks of cards.
+  The main game draws cards from the created shoe object.
+*/
+
 package test;
 
 import java.util.ArrayList;
@@ -21,6 +26,7 @@ public class Shoe {
    
    public static void createShoe() {
       
+      //Fills the deck array with 52 playing cards
       deck = new ArrayList<String>();
       shoe = new ArrayList<String>();
       deck.add("Ace of Clubs");
@@ -75,7 +81,8 @@ public class Shoe {
       deck.add("Jack of Spades");
       deck.add("Queen of Spades");
       deck.add("King of Spades");
-   
+      
+      //loops and fills the shoe array with the contents of the deck array 6 times
       for (int i = 0; i < 6; i++) {
          for (int j = 0; j < 52; j++) {
             shoe.add(deck.get(j));
@@ -167,6 +174,25 @@ public class Shoe {
       else {
          return 0;
       }
+   }
+   
+   //aceCount checks if an ace is drawn
+   public static boolean aceCount(String card) {
+      if (card.contains("Ace")) {
+         return true;
+      } else {
+         return false;
+      }
+   }
+   
+   //Takes 10 off a bust handTotal if aces are present in the hand
+   public static int handTotalMod(int handTotal, int aceNum) {
+      if (handTotal > 21) {
+         if (aceNum > 0) {
+            handTotal -= 10;
+         }
+      }
+      return handTotal;
    }
    
    @Override

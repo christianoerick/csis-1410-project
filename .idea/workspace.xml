@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ec4747d-8d07-4464-93d7-f5fc2c3f684e" name="Changes" comment="" />
+    <list default="true" id="9ec4747d-8d07-4464-93d7-f5fc2c3f684e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TeamProject.eml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/project/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/project/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/project/Shoe.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/project/Shoe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/project/TeamProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/project/TeamProject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/BlackjackMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/BlackjackMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/Shoe.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/Shoe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/TeamProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/TeamProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/BlackjackMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/BlackjackMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Shoe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Shoe.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,28 +26,81 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2YsRNRGz8TyuygZe4vFogtLg7s0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "ciaran",
-    "last_opened_file_path": "/Users/cia/eclipse-workspace/TeamProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;JavaSE-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/cia/eclipse-workspace/TeamProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Application.BlackjackMain">
+    <configuration name="BlackjackMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.BlackjackMain" />
+      <module name="TeamProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeamProject" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="JavaSE-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="project.TeamProject.java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="project.TeamProject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="project.TeamProject" />
+      <module name="TeamProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BlackjackMain" />
+        <item itemvalue="Application.project.TeamProject" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,10 +110,22 @@
       <option name="presentableId" value="Default" />
       <updated>1701312259448</updated>
       <workItem from="1701312260684" duration="1067000" />
+      <workItem from="1701313942137" duration="1579000" />
+      <workItem from="1701399063936" duration="4795000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/Player.java</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

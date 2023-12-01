@@ -2,8 +2,8 @@ package project;
 
 import java.util.Scanner;
 
-import test.Player;
-import test.Shoe;
+//import test.Player;
+//import test.Shoe;
 
 public class TeamProject {
 
@@ -40,7 +40,7 @@ public class TeamProject {
         while (playAgain.equals("y"))
         {   
             //Check to see if enough cards are left in the Shoe
-            if (gameShoe.shoe.size() > 40) {
+            if (gameShoe.shoe.size() > 52) {
                
                while (bet < 1 || bet > Player.getPlayerMoney()) {
                   System.out.println("Enter bet amount ($1 or higher): ");
