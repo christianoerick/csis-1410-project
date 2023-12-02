@@ -1,13 +1,113 @@
 package project;
 
-import java.util.Scanner;
+import java.util.*;
 
-//import test.Player;
-//import test.Shoe;
+public class TeamProject 
+{
+	private static Scanner scnr = new Scanner(System.in);
+	
+    public static void main(String[] args) 
+    {
+        String temp;
 
-public class TeamProject {
+    	ArrayList<Player> players = new ArrayList<>();
+    	
+    	// Because you like this soooooooooo much...
+    	do
+    	{
+    		temp = userInput("Enter the player name: ");
+        	players.add(new Player(temp));	
+    	}
+    	while(players.size() < 2);
+    	
+    	Dealer dealer = new Dealer();
+    	players.add(dealer);
 
-    public static void main(String[] args) {
+    	Shoe shoe = new Shoe();
+    	
+    	// pending - bets
+    	shoe.startGame();
+    	
+    	for (int i = 1; i <= 2; i++)
+		{
+    		for (Player p: players)
+        	{
+    			Card c = shoe.buyCard(i == 1 && p instanceof Dealer);
+    			p.handAddCard(c);
+        	}
+		}
+    	
+    	boolean gameIsOver = false;
+    	boolean keepAsking = false;
+    	
+    	// why not another do while?
+		for (Player p: players)
+    	{
+			if (p instanceof Dealer)
+			{
+				if (p.handTotal() == 21)
+				{
+					gameIsOver = true;
+				}
+			}
+			else
+			{
+				if (p.handTotal() == 21)
+				{
+					// black jack
+				}
+				else if (p.handTotal() > 21)
+				{
+					// player is out
+				}
+				else
+				{
+					do
+					{
+						keepAsking = true;
+        				System.out.println(p);
+            			System.out.print("Enter S for stand or H for Hit: ");
+            			
+                    	temp = scnr.nextLine();
+                    	if (temp.toUpperCase().equals("S"))
+                    	{
+                    		keepAsking = false;
+                    	}
+                    	else if (temp.toUpperCase().equals("H"))
+                    	{
+                    		Card c = shoe.buyCard(false);
+                			p.handAddCard(c);
+                			
+                			if (p.handTotal() > 21)
+            				{
+            					// player is out
+                				keepAsking = false;
+            				}
+                    	}
+                    	else
+                    	{
+                    		System.out.println("ENTER A VALID OPTION: H or S");
+                    	}
+					}
+					while(!keepAsking);
+				}
+			}
+    	}
+    	
+    	for (Player p: players)
+    	{
+    		System.out.println(p);
+    	}
+    	
+    }
+    
+    private static String userInput(String question)
+    {
+    	System.out.print("Enter the player name: ");
+    	return scnr.nextLine();
+    }
+    	
+    	/*
 
         String hit = "null", playAgain = "y", playerName;//, playerMoney;
         String nextCard, card1, card2, dealerCard1, dealerCard2;
@@ -172,6 +272,5 @@ public class TeamProject {
                 }
               
             }
-}
-
+/**/
 }
