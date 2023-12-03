@@ -49,6 +49,16 @@ public class Card
 		hidden = true;
 	}
 	
+	public void setPublic()
+	{
+		hidden = false;
+	}
+	
+	public boolean isHidden()
+	{
+		return hidden;
+	}
+	
 	public boolean isAce()
 	{
 		return values[0] != values[1];
@@ -57,6 +67,6 @@ public class Card
 	@Override
 	public String toString()
 	{
-		return name + " of " + suit + " | Values: " + (hidden ? "HIDDEN" : values[0] + ", " + values[1]);
+		return (hidden ? "HIDDEN" : name + " of " + suit);
 	}
 }

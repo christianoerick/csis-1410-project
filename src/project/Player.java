@@ -6,9 +6,10 @@ public class Player
 {
 	private String playerName;
 	private int playerMoney = 2000;
-	private boolean inGame = true; // if they lose they, inGame = false
+	private boolean hasBlackJack = false;
 	private ArrayList<Card> hand = new ArrayList<>();
 	private int handTotalSum = 0;
+	private int gameCurrentBet = 0;
  
 	public Player(String name) 
 	{
@@ -20,19 +21,35 @@ public class Player
 		return playerName;
 	}
 	
-	public void setPlayerName(String name)
-	{
-		playerName = name;
-	}
-	
 	public int getPlayerMoney() 
 	{
 		return playerMoney;
 	}
- 
-	public void setPlayerMoney(int amount) 
+	
+	public void addMoney(int amount)
 	{
-		playerMoney = amount; 
+		playerMoney += amount;
+	}
+	
+	public void removeMoney(int amount)
+	{
+		playerMoney -= amount;
+	}
+	
+	public void setCurrentBet(int amount)
+	{
+		gameCurrentBet = amount;
+	}
+	
+	public int getCurrentBet()
+	{
+		return gameCurrentBet;
+	}
+	
+	public void handClean()
+	{
+		hand.clear();
+		handTotalSum = 0;
 	}
 	
 	public void handAddCard(Card card)
@@ -80,13 +97,50 @@ public class Player
 		return hand;
 	}
 	
+	public boolean isBlackJack()
+	{
+		return hasBlackJack;
+	}
+	
+	public void removeBlackJack()
+	{
+		hasBlackJack = false;
+	}
+	
+	public void setBlackJack()
+	{
+		hasBlackJack = true;
+	}
+	
 	@Override
 	public String toString()
 	{
-		String result = " # " + playerName + " (Money: " + playerMoney + " | HandTotal: " + handTotalSum + ")\nCards:\n";
-		for(Card c: hand)
+		String result = "";
+		result += " # " + playerName;
+		result += " (Money: " + playerMoney;
+		if (gameCurrentBet > 0)
 		{
-			result += " * " + c.toString() + "\n";
+			result += " | Current Bet: " + gameCurrentBet; 
+		}
+		if (hand.size() > 0)
+		{
+			if (hasBlackJack)
+			{
+				result += " | BlackJack";
+			}
+			else
+			{
+				result += " | Hand Total: " + handTotalSum;
+			}
+		}
+		result += ")";
+		if (hand.size() > 0)
+		{
+			result += "\n  Cards:\n";
+			for(Card c: hand)
+			{
+				result += " * " + c.toString() + "\n";
+			}
 		}
 		return  result;
 	}
