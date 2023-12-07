@@ -79,10 +79,20 @@ public class Player
 		
 		if (aces > 0)
 		{
-			for (int i = aces; i > 0; i--)
+			for (int i = 1; i <= aces; i++)
 			{
-			    int temp = handTotalSum + aces - 1 + 11;
-			    handTotalSum += temp <= 21 ? 11 : 1;
+				if (i != aces)
+				{
+					handTotalSum++;
+				}
+				else
+				{
+					handTotalSum += 11;
+					if (handTotalSum > 21)
+					{
+						handTotalSum -= 10;
+					}
+				}
 			}
 		}
 	}
