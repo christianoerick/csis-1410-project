@@ -6,8 +6,6 @@ public class Shoe
 {
 	public ArrayList<Card> cards = new ArrayList<>();
 	public ArrayList<Card> shoe = new ArrayList<>();
-	private ArrayList<String> shuffledShoe;
-	private boolean firstDraw = true;
  
 	public Shoe() 
 	{
